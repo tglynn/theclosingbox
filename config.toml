@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "http://theclosingbox.com/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "The Closing Box"
 theme="hugo_theme_pickles"
