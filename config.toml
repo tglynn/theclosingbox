@@ -1,4 +1,18 @@
 baseURL = "https://theclosingbox.com/"
 languageCode = "en-us"
-title = "The Closing Box"
+title = "the closing box"
 theme="hugo_theme_pickles"
+
+[params]
+  paginate = 10
+  twitter = "timjglynn"
+
+[[menu.main]]
+    name = "home"
+    url = "/"
+    weight = 1
+
+[[menu.main]]
+    name = "about"
+    url = "/about"
+    weight = 2

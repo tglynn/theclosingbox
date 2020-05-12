@@ -1,0 +1,11 @@
+---
+title: "about"
+date: 2020-05-11T23:13:03-04:00
+draft: false
+---
+
+
+Boston based.
+
+"The correction of prose, because it has no fixed laws, is endless - a poem
+comes right with a click like a closing box"

@@ -11,6 +11,3 @@ The 5,1 MacPro.  A real thing of beauty.
 
 
 And a surprisingly useful computer, in spite of the ten long years since its release.
-
-
-{{< zoom-img src="/images/mp_01.jpeg" >}}
