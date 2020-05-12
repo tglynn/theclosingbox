@@ -1,4 +1,4 @@
-baseURL = "http://theclosingbox.com/"
+baseURL = "https://theclosingbox.com/"
 languageCode = "en-us"
 title = "The Closing Box"
 theme="hugo_theme_pickles"
