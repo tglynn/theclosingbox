@@ -3,15 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://theclosingbox.com/categories/</loc>
+    <loc>https://theclosingbox.com/about/</loc>
+    <lastmod>2020-05-11T00:00:00-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://theclosingbox.com/tags/</loc>
+    <loc>https://theclosingbox.com/posts/mac-pro-buildlog-03/</loc>
+    <lastmod>2020-05-13T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://theclosingbox.com/posts/mac-pro-buildlog-02/</loc>
+    <lastmod>2020-05-12T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://theclosingbox.com/posts/mac-pro-buildlog-01/</loc>
+    <lastmod>2020-05-12T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://theclosingbox.com/categories/</loc>
+    <lastmod>2020-05-13T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://theclosingbox.com/categories/macprobuildlog/</loc>
+    <lastmod>2020-05-13T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://theclosingbox.com/posts/</loc>
+    <lastmod>2020-05-13T00:00:00-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://theclosingbox.com/</loc>
+    <lastmod>2020-05-11T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://theclosingbox.com/tags/</loc>
   </url>
   
 </urlset>

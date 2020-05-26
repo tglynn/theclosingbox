@@ -1,9 +1,10 @@
----
-title: "about"
-date: 2020-05-11T23:13:03-04:00
-draft: false
----
-
++++
+title = "about"
+date = 2020-05-11
+weight = 3001
+draft = false
+toc = false
++++
 
 Boston based.
 

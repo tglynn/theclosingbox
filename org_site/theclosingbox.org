@@ -1,0 +1,625 @@
+#+hugo_base_dir: ../
+#+hugo_weight: auto
+#+options: author:nil
+* The Closing Box
+** Pages
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: ./
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :toc false
+:END:
+
+*** about
+:PROPERTIES:
+:EXPORT_FILE_NAME: about
+:EXPORT_DATE: 2020-05-11
+:END:
+
+Boston based.
+
+"The correction of prose, because it has no fixed laws, is endless - a poem
+comes right with a click like a closing box"
+
+*** Mac Pro Build Log                                     :@macprobuildlog:
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: posts
+:END:
+
+**** DONE macpro build - day 1
+:PROPERTIES:
+:EXPORT_FILE_NAME: mac-pro-buildlog-03
+:EXPORT_DATE: 2020-05-13
+:END:
+
+***** the machine
+It begins!  First, we'll verify our day 0 assumptions, and examine the machine
+itself.
+
+#+CAPTION: A first peek inside
+[[file:/images/mp_02.svg]]
+
+All told, it's cosmetically /fine/.  I'd love a more pristine chassis (this guy
+has definitely been bounced off some rough corners), but it was
+relatively clean on the inside.  I blew the machine out with compressed air and
+wiped down all of touchable surfaces before really cracking in.
+
+(A small disappointment; it shipped with a generic power cable, and was missing
+a drive tray.  I understand lots of shops find it easier to strip the whole tray
+out when decommissioning these machines, and keeping track of the original power
+cable is well beyond the purview of most IT shops, but I would have preferred to
+get all of the original components).
+
+Starts up just fine the first time that I plug it in and hit the power
+button. All fans are rotating, optical drive seems to be fully functional as
+well.
+
+***** clean install
+
+Let's get ourselves a clean macOS installation first.  We'll follow the Apple
+kbase article [[https://support.apple.com/en-us/HT201372][here]] to create a USB 2.0 bootable installer.  Booting to the
+installer works just fine and disk utility doesn't complain about re
+partitioning the 1 TB internal HDD.  I chose HFS+, since this is a rotational
+drive (I'll use APFS for the NVMe installations).
+
+Before I can reinstall High Sierra, I'm prompted for the first firmware update.
+It had been a long time since I last ran a firmware update on a Mac Pro; if you
+find yourself trying to do it, be patient -  it takes longer than you might
+expect.  The optical drive will pop open during the process (to allow you to pop
+in a CD with differing firmware, if I recall correctly), so keep an eye out for
+the opening and closing of the optical drive.
+
+With the firmware update done and a fresh install of High Sierra completed, it's
+time to log in and capture the specs of the machine.
+
+***** the specs
+
+Of note here are the current boot ROM version.  The machine can't boot from an
+NVMe drive on this boot ROM, so we'll need to run some more firmware updates
+before we get the actual macOS installation setup.
+
+
+#+begin_example
+Hardware Overview:
+
+  Model Name:	Mac Pro
+  Model Identifier:	MacPro5,1
+  Processor Name:	Quad-Core Intel Xeon
+  Processor Speed:	2.4 GHz
+  Number of Processors:	2
+  Total Number of Cores:	8
+  L2 Cache (per Core):	256 KB
+  L3 Cache (per Processor):	12 MB
+  Memory:	16 GB
+  Boot ROM Version:	MP51.0089.B00
+  SMC Version (system):	1.39f11
+  SMC Version (processor tray):	1.39f11
+  Serial Number (system):	<REDACTED>
+  Serial Number (processor tray):	<REDACTED>
+  Hardware UUID:	<REDACTED>
+
+
+
+ATI Radeon HD 5770:
+
+  Chipset Model:	ATI Radeon HD 5770
+  Type:	GPU
+  Bus:	PCIe
+  Slot:	Slot-1
+  PCIe Lane Width:	x16
+  VRAM (Dynamic, Max):	1024 MB
+  Vendor:	AMD (0x1002)
+  Device ID:	0x68b8
+  Revision ID:	0x0000
+  ROM Revision:	113-C0160C-155
+  VBIOS Version:	113-C01601-103
+  EFI Driver Version:	01.00.436
+  Displays:
+24G1WG4:
+  Resolution:	1920 x 1080 (1080p FHD - Full High Definition)
+  UI Looks like:	1920 x 1080 @ 60 Hz
+  Framebuffer Depth:	24-Bit Color (ARGB8888)
+  Main Display:	Yes
+  Mirror:	Off
+  Online:	Yes
+  Rotation:	Supported
+  Automatically Adjust Brightness:	No
+  Connection Type:	DisplayPort
+
+
+
+Memory Slots:
+
+  ECC:	Enabled
+  Upgradeable Memory:	Yes
+
+DIMM 1:
+
+  Size:	8 GB
+  Type:	DDR3 ECC
+  Speed:	1066 MHz
+  Status:	OK
+  Manufacturer:	0x857F
+  Part Number:	0x463732314755363746393333334700000000
+  Serial Number:	-
+
+DIMM 2:
+
+  Size:	Empty
+  Type:	Empty
+  Speed:	Empty
+  Status:	Empty
+  Manufacturer:	Empty
+  Part Number:	Empty
+  Serial Number:	Empty
+
+DIMM 3:
+
+  Size:	Empty
+  Type:	Empty
+  Speed:	Empty
+  Status:	Empty
+  Manufacturer:	Empty
+  Part Number:	Empty
+  Serial Number:	Empty
+
+DIMM 4:
+
+  Size:	Empty
+  Type:	Empty
+  Speed:	Empty
+  Status:	Empty
+  Manufacturer:	Empty
+  Part Number:	Empty
+  Serial Number:	Empty
+
+DIMM 5:
+
+  Size:	8 GB
+  Type:	DDR3 ECC
+  Speed:	1066 MHz
+  Status:	OK
+  Manufacturer:	0x857F
+  Part Number:	0x463732314755363746393333334700000000
+  Serial Number:	-
+
+DIMM 6:
+
+  Size:	Empty
+  Type:	Empty
+  Speed:	Empty
+  Status:	Empty
+  Manufacturer:	Empty
+  Part Number:	Empty
+  Serial Number:	Empty
+
+DIMM 7:
+
+  Size:	Empty
+  Type:	Empty
+  Speed:	Empty
+  Status:	Empty
+  Manufacturer:	Empty
+  Part Number:	Empty
+  Serial Number:	Empty
+
+DIMM 8:
+
+  Size:	Empty
+  Type:	Empty
+  Speed:	Empty
+  Status:	Empty
+  Manufacturer:	Empty
+  Part Number:	Empty
+  Serial Number:	Empty
+#+end_example
+
+We're definitely not running the stock RAM (the OWC sticker in the earlier
+picture was a bit of a tip off there), but it's good to hang on to some known
+good memory for slot testing and troubleshooting.  Ultimately, the goal is to
+be able to isolate any failures component by component, following the flow of
+signal and power, until the source of any problem is obvious.  The 8 gig OWC
+DIMMs can serve that purpose quite well in the future.
+
+
+***** baseline performance
+
+Let's capture what this machine can do before we start improving it.  I'm going
+to use synthetic benchmarks as a short hand for performance because it's simple
+and straightforward; actually computing performance is anything but that.  At
+some point I'll probably write up my performance testing manifesto, but in the
+mean time, I'm going to say this: synthetic benchmarks can be a useful shorthand
+for some performance characteristics in well understood problem spaces.  I'm
+going to use them here because it'll be fun to see the numbers go up.
+
+****** geekbench 5, cinebench 20
+
+Sitting next to the machine while it runs the [[https://www.geekbench.com][Geekbench 5]], I'm struck by how
+little change there is in the pitch and volume of the fans.  It's not a silent
+machine by any stretch of the imagination, but it's a consistent white noise
+that's not particularly distracting.  It's not a long test (4 or 5 minutes to
+complete), so that could certainly change if it ran for longer, but all told, a
+good first impression for usability during compute tasks.
+
+Note again this is running with the original pair of Xeon 5620's (2 processors,
+each with 4 cores and 8 threads) with 16 gigs (2x8) of 1066 MHz DDR3 memory.
+The graphical benchmarks will be testing the ATI Radeon HD 5770.
+
+| Benchmark                    | Result |
+|------------------------------+--------|
+| Geekbench 5 CPU, Single Core |    485 |
+| Geekbench 5 CPU, Multi Core  |   3160 |
+| Geekbench 5 Compute (OpenCL) |   1005 |
+| Cinebench                    |   1640 |
+
+Nothing surprising there.  Our single core performance is pretty dismal.  Multi
+core performance puts us just below the 4 core 8 thread 2.6 GHz Intel Core
+i7 6700.  Graphical performance...makes sense for a card from a previous decade.
+
+***** stability and load
+
+I'd like to check out the general stability of the machine as well, before I
+start making changes and introducing potential chaos.  My stability checks here
+are pretty simple; I'll open up eight instances of terminal, each redirecting
+the =yes= command to =/dev/null=.  That'll keep threads of execution running at
+clock rate along each of the eight real physical cores.  And I'll just leave
+that running.  Ideally, we won't hear a huge change in fan volume (if I were
+really good about this, I'd actually measure the ambient and specific volumes
+during this test, but considering the myriad of other noises in and around my
+home, I'm totally comfortable with the less scientific approach of playing it by
+ear), and the machine should be responsive throughout the test.
+
+All told, I let this run for about 6 hours, hopping on occasionally to open a
+browser window or move some Finder windows around.  No issues with
+responsiveness and it was still running just fine at the tail end of it.  Not
+necessarily a perfect bill of health, but a pretty good indicator of stability.
+Funnily enough, my work laptop (2015 15 inch Macbook Pro) is louder running
+builds than the Mac Pro.
+
+***** installing the rx 580
+
+This machine has such lovely little touches.  The PCI card locking bar,
+controlled with a button press from an enclosure around the central system fan
+is quite clever.  And of course, the PCI slot cover plate has good sized,
+grippable thumb screws (and they're captured! why would they not be?) that
+really put to shame so many other generic cases.  I understand that case design
+and ergonomics have been improving in general in the PC industry, but many of
+the machines that I've worked on before had terribly fussy screws holding the
+PCI slot covers in place.  This simple place is such a nice touch.
+
+#+CAPTION: Easy to turn by hand, with Phillips slots for undoing overzealous tightening
+[[file:/images/mp_03.svg]]
+
+Power for the RX 580 is an easy story.  Just replace the 5770's mini six pin to
+six pin with a two mini six pin to eight pin cable.
+
+#+CAPTION: Two mini six pin to eight pin cable
+[[file:/images/mp_04.svg]]
+
+
+Out comes the 5770
+
+#+CAPTION: ATI Radeon HD 5770
+[[file:/images/mp_05.svg]]
+
+
+And in goes the RX 580
+
+#+CAPTION: RX 580
+[[file:/images/mp_06.svg]]
+
+#+CAPTION: The installed 580
+[[file:/images/mp_07.svg]]
+
+I'll confess, I'm a little concerned at this point about airflow.  Looking at
+the NVMe card, it's going to be flush right up against the RX 580.  Heat might
+be a concern here.
+
+***** firmware updates
+
+Now that there's a Metal capable GPU installed, the Mojave installer will launch
+(without a Metal capable GPU, the unpatched installer won't run).  I'm not
+actually interested in the install at this point, since we'll be installing to
+the NVMe drive, but the firmware updater is bundled into the 10.14.6 combo
+installer.
+
+Since the RX 580 isn't mac flashed (this era of Macs ran non standard extensible
+firmware interface (EFI), not to be confused with the now ubiquitous UEFI.  The
+generic RX 580 doesn't know how to display video during the EFI stage of
+booting, so no video at the boot prompt), I'll be flying blind here.  Flashing
+power LED, long tone, and the optical drive opening and closing are the only
+indicators to the process.
+
+Coming back into the operating system, we've got the right firmware now to boot
+from an NVMe drive.
+
+#+CAPTION: The sharp eyed reader will see upgraded CPUs and memory here; I had to take this screenshot after the fact
+[[file:/images/mp_08.svg]]
+
+Now it's time for the NVMe cards and the real Mojave installation.
+
+***** nvme card
+
+#+CAPTION: Syba I/O Crest
+[[file:/images/mp_09.svg]]
+
+These are some positively /tiny/ standoffs.  Screwing them in from the bottom is
+fussy work.  There may or may not have been a few frantic minutes waving a
+flashlight across my floor to find the telltale flicker of a dropped standoff
+screw.
+
+#+CAPTION: Look at how tiny they are!
+[[file:/images/mp_10.svg]]
+
+I foolishly thought that using the provided screw driver was a good idea.
+Definitely not.  Switching to a real magnetized jeweler's set made getting the
+m.2 drives installed much easier.
+
+It's a tight fit against the RX 580.  They are cheek to jowl in there, and I'll
+need to keep an eye on temperatures.
+
+#+CAPTION: The Syba installed
+[[file:/images/mp_11.svg]]
+
+
+Both drives are recognized immediately.  A quick trip to disk utility leaves us
+with a GUID partition scheme for an APFS volume that will serve as the target of
+the Mojave installation.
+
+Nothing eventful to the install; kick it off, get some coffee, and come back to
+a clean install of Mojave.
+
+At this point, I'm done with the original 1 TB rotational drive (at close to 10
+years old, I wouldn't want to rely on it for anything).  I'll put it in my big
+box of just-in-case parts for the Mac Pro joining the 5770, to be dusted off in case of a need to
+return to High Sierra.
+
+
+***** revisiting gpu performance
+
+With the newly installed card, let's take a loot at the changes in GPU
+performance.
+
+| Benchmark                    | Result |
+|------------------------------+--------|
+| GeekBench 5 Compute (OpenCL) |  39043 |
+| GeekBench 5 Compute (Metal)  |  42658 |
+
+
+Almost a 40x improvement; not too shabby at all.
+
+**** DONE macpro build - day 0
+:PROPERTIES:
+:EXPORT_FILE_NAME: mac-pro-buildlog-02
+:EXPORT_DATE: 2020-05-12
+:END:
+
+Now that we now what we're going to try to do here and why, let's formulate some
+kind of plan for this project.
+
+***** the plan
+
+I'm going to start with the lowest spec 2 processor tray.  I might have been
+able to find a better deal on a single processor machine and then source a dual
+proc CPU tray, but from a cursory search of ebay and craigslist, that might take
+a while, and I'm a little concerned about extra shipping cycles and part
+availability.  Ultimately, I landed on:
+
+=Apple Mac Pro 5,1 MC561LL/A (2010) 8 Core/16GB/1TB/ ATI Radeon 5770=
+
+(Note that the =8 Core= specification spells out two quad core CPUs)
+
+More details around that particular Mac available [[https://everymac.com/systems/apple/mac_pro/specs/mac-pro-eight-core-2.4-mid-2010-westmere-specs.html][here]].
+
+Most of those specs are stock - that is the GPU that shipped with that machine in
+2010, which is important for getting the bootscreen and will be a useful thing to keep
+around for troubleshooting, and a 1 TB 7200 RPM rotating drive also could well
+be original.  The RAM isn't stock (the original machine shipped with six 1 GB
+DIMMs), but that's a super common upgrade, and I don't imagine we'll need the
+factory RAM for anything.
+
+From the listing, the machine is running High Sierra.  Unclear which firmware it
+will ship with.
+
+/What's the plan?/
+
+There are a few interlocking steps here. To upgrade from High Sierra to Mojave,
+I'll need a metal capable graphics card.  Switching to a metal capable graphics
+card probably means giving up the boot screen (there are flashed firmware cards,
+and folks who offer firmware flashing as a service, but I don't think it's worth
+it for my use case).  I'll likely end up running [[https://github.com/acidanthera/OpenCorePkg][OpenCore]] anyway to allow me to
+update to Catalina with hardware acceleration and Thunderbolt 3 support, so the
+boot screen isn't a big loss.
+
+So I need a metal capable GPU.  I've gone back and forth a bit, trying to decide
+between the 5700 XT and the Radeon VII.  The 5700 XT is a newer Navi card, with
+some significant benefits to power draw and cooling.  They're both 7nm
+processes, but the Radeon VII is much more power hungry.  To the Radeon VII's
+credit, it appears to benchmark better than the 5700 XT in several performance
+characteristics, and, most importantly, is supported in both Mojave and Catalina
+(the 5700XT requires a relatively new version of Catalina).  Both would likely
+require modifying my power supply.  In the end, I landed on the Radeon VII for
+the slightly increased flexibility, slightly better performance and slightly
+better price.  I will need an interim card, a card that runs in both High Sierra
+and Mojave so that I can perform the litany of firmware updates and the crucial
+update from High Sierra to Mojave.  It will also take some time to get the parts
+required for the power supply mod, so I'll be using an MSI RX 580 Armor 8G OC
+with a dual mini 6 pin to 8 pin power adapter in the interim.
+
+I'll keep the 1 TB HDD on High Sierra so that I can use the original 5770 (once
+I upgrade to Mojave, the 5770 won't be able to boot the OS).  The plan starts to
+look like:
+
+1. Document and benchmark the initial system
+2. Run High Sierra firmware updates, wipe 1 TB HDD and clean install High Sierra
+3. Install Radeon RX 580.  Power the card with a dual mini 6 pin to single 8 pin
+   adapter.
+4. Run all firmware updates bundled in the Mojave installer. This will bring the
+   machine's firmware to =144.0.0.0.0=, and crucially adds the ability to boot
+   off of NVMe drives.
+5. Install PCIe NVMe bifurcation Riser and boot NVMe drive in slot 2
+6. Install Mojave to NVMe drive.  Remove 1 TB HDD, store in safe place.
+7. Flash Titan Ridge thunderbolt 3 card
+8. Install Thunderbolt 3 card
+9. Upgrade CPUs
+10. Upgrade memory
+11. Perform [[http://blog.greggant.com/posts/2018/05/07/definitive-mac-pro-upgrade-guide.html#pixlas][pixlas mod on power supply]]
+12. Install Radeon VII
+13. Upgrade optical drive to Blu-ray drive
+14. Install Windows 10 (to either SATA SSD or, if I've installed OpenCore, to
+    the second NVMe drive)
+
+***** componentry
+
+This will leave me with a machine that looks like (from the bottom of the box
+up):
+
+| Location            | Component                                                                        |
+|---------------------+----------------------------------------------------------------------------------|
+| CPU Tray            | 2 x Xeon 5690 (32 nm 6 core, 12 thread 3.46-3.73 GHz processors)                 |
+| Memory Slots        | 96 gigabytes (6 x 16) DDR3 ECC memory at 1333 MHz                                |
+| PCIe Slot 1         | Radeon VII                                                                       |
+| PCIe Slot 2         | Syba I/O Crest SI-PEX40129 Dual M.2 NVMe Bifurcation Riser                       |
+| Syba Slot 1         | 1 TB Samsung 970 Evo NVMe (macOS boot drive)                                     |
+| Syba Slot 2         | 1 TB Samsung 970 Evo NVMe (Windows 10)                                           |
+| PCIe Slot 3         | Sonnet Allegro USB-c 4 port PCIe card                                            |
+| PCIe Slot 4         | Gigabyte GC-Titan Ridge Thunderbolt 3 card                                       |
+| Drive Bay 1         | 8 TB Seagate HDD (Time Machine, EFI host for OpenCore)                           |
+| Drive Bay 2         | 3 TB WD Red HDD (Mac rotational storage)                                         |
+| Drive Bay 3         | 3 TB WD Red HDD (Windows rotational storage)                                     |
+| Drive Bay 4         | 3 TB WD Red HDD (Vanilla Mojave bootable snapshot, for OpenCore troubleshooting) |
+| Optical Drive Bay 2 | Empty                                                                            |
+| Optical Drive Bay 1 | LG WH16NS60 16x Internal Blu-ray BDXL M-Disc Drive (flashed for UHD rips)        |
+
+
+***** references
+
+- [[http://blog.greggant.com/posts/2018/05/07/definitive-mac-pro-upgrade-guide.html][The Definitive Classic Mac Pro Upgrade Guide]] - just an outstanding
+  resource. Lots of information, lots of links.  This single post provides
+  almost all of required info for this project.
+
+- [[https://forums.macrumors.com/threads/testing-tb3-aic-with-mp-5-1.2143042/][MacRumors thread, Thunderbolt 3]] - ever evolving, source of some great
+  information about flashing the Titan Ridge for use in the cMP 5,1
+
+- [[https://forums.macrumors.com/threads/opencore-on-the-mac-pro.2207814/?view=reaction_score][OpenCore on Legacy Apple Hardware]] - another fantastically maintained wiki
+  post.  Improved by leaps and bounds even as I'm writing this up.
+
+- [[https://github.com/ameyrupji/thunderbolt-macpro-5-1][Thunderbolt Mac Pro Early 2009]] - good summation of the flashing process, with
+  some very useful pictures and links
+
+- [[https://www.makemkv.com/forum/viewtopic.php?f=16&t=19928&sid=66451896270b9a530b25b882ed3aad55][Flashing for 4k UHD]] - not cMP 5,1 specific, but great information on flashing
+  the Blu-ray drive for 4k UHD rips
+
+- [[https://www.tonymacx86.com/threads/success-gigabyte-designare-z390-thunderbolt-3-i7-9700k-amd-rx-580.267551/][Gigabyte designare flashing]] - the micro guides provide a ton of useful
+  background information, and tend to be a little more technical in their
+  explanations.  Useful for trying to understand /why/ some steps are required.
+
+
+**** macpro build - what and why
+:PROPERTIES:
+:EXPORT_FILE_NAME: mac-pro-buildlog-01
+:EXPORT_DATE: 2020-05-12
+:END:
+
+In March of 2020, I went looking for a project.  I was looking for something
+that I could focus some extra time and energy on (that /wasn't/ just frantically
+refreshing news sites).  I was working from home full time for the first time in
+my life, a change which necessitated some alterations to my workspace.  Graduate
+school was finished, so I could afford some instability on my personal machine,
+and the 5k iMac that had served as the anchor of my home computing life was now
+in the way (I couldn't use it for work, so it ended up awkwardly shunted aside
+most days, and moving it back into place every night was /just/ annoying enough
+to be untenable.  It was easier to just leave my work machine plugged in and
+running, but /that/ lead to the temptation to do juuuust a little more work
+whenever I sat down at my desk; you can imagine the impact that had on work-life
+balance).
+
+Enter the 5,1 Mac Pro.
+
+***** the cheese grater
+
+The 5,1 Mac Pro, released in 2010, with a minor spec bump shipped in 2012 and
+ultimately replaced by late 2013's trash can, is a very special machine.  Due to
+the design choices (and expense) of the models that replaced it, it's had a long
+and vibrant life as an expandable, flexible, workstation that can be kitted out
+for a variety of use cases.  It holds a special place in my heart as the most
+powerful machine Apple was shipping during my time as a Genius; it was the most
+complicated machine to troubleshoot, given the flexibility and complexity of its
+internals, but it was always a thrill to see one sidle up to the bar.  It was a
+machine that /did work/ (or at least, purported to. I fully recognize the myth
+of the Mac Pro, which was always more costly than it had any right to be).
+
+Could it be my 2020 computer?
+
+#+CAPTION: cMP 5,1
+[[file:/images/mp_01.svg]]
+
+***** what's the goal?
+
+What am I trying to do here, exactly?  I'm looking to wrangle up a Mac desktop,
+responsive enough for day to day use, with enough compute and memory to handle
+my polyglot programming (virtualization and containerization, some Go, a
+smattering of C++/Clojure/Swift/Python, depending on what I'm picking at on a
+particular day), and the graphical power to run the handful of games (some
+Blizzard titles, Total War: Warhammer and its sequels, Tabletop Simulator).
+
+I'm loosely describing my requirements as: a desktop,  running macOS, built by
+Apple.
+
+
+/Why a desktop?/
+
+In my experience, laptops add a thin layer of unreliability when being used
+permanently docked at a desk.  Peripheral negotiation is often fussy, cooling
+can be a problem, and ultimately it feels to me like a misuse of the object.
+Look at a laptop; it's fundamentally designed for portability. Using it
+permanently tethered feels like hammering nails in with the back end of a
+screwdriver.
+
+/Why macOS?/
+
+Windows is a tire fire.  The software ecosystem is a Hieronymus Bosch style
+rhizome of misery and suffering, and software development on Windows outside of
+the Microsoft ecosystem just sucks.  That's all a deliberately inflammatory
+description, but it captures how I feel (and the bulk of my experience trying to
+develop for Linux systems on Windows in my previous job).  Window management is
+remedial (whoever thought full screen and half screen splits were a good idea,
+and parasitically infected other operating systems with that idea should be
+tried at the Hague), keyboard shortcuts across the OS for text wrangling suck,
+and Emacs on Windows suffers from all sorts of painful compromises.
+
+A more measured answer to "Why not Windows?" is that I don't have room in my brain at the moment
+for a detailed enough mental model of the foibles and pit traps of Windows 10.  I'm
+not particularly interested in building that model, to be totally honest, since I
+find the essential primitives of Windows as an operating system (the registry?
+really?) and the user punishing choices (adware in the start menu, user hostile
+updates) alien and off putting.  It's the only way to play PC games, so I'll
+always have it installed somewhere in the house, but I'd like it as cordoned off
+as possible.
+
+The desktop experiences of the non-macOS *nixs are unpleasant for me. Window
+management and keyboard shortcuts tend to ape Windows out of the box (yes, there
+are distros and customization paths to mimic macOS, but they're never quite 100%
+reliable in my experience).  I'll continue to happily run Linux and BSD servers, both in
+the house on a handful of headless machines and in VPS's, but for a desktop
+machine macOS is the best choice for me.
+
+/Why not a Hackintosh?/
+
+Given the decision to run macOS and the computational/GPU requirements, an
+obvious question would be "Why not build a Hackintosh?" OpenCore has come a long
+way, the community is active and communicative, AMD has some rad chip offerings
+bringing high core counts way down in price - there are a lot of compelling
+reasons to build a Hackintosh.  I've done it before, almost half a decade ago,
+and found Clover pretty straightforward to configure, and the resulting machine
+was powerful and flexible.  But honestly, I've built more than enough PCs.  It's
+boring, in many ways, and I don't think building a generic PC and installing
+macOS on it would be the engaging project that I'm looking for amidst all of
+this chaos.
+
+
+I have a great deal of affection for the 5,1 Mac Pro.  The high core count, high
+memory configuration is surprisingly effective in 2020, and fits my use cases
+especially well.  Most intriguingly, the vibrant Mac Pro community has made huge
+leaps in recent months, bringing Catalina support, hardware acceleration and,
+most importantly to me, Thunderbolt 3.  Thunderbolt support would mean one cable
+to plug in my work laptop during the day, and a single cable moving over to
+switch to my main machine outside of work.

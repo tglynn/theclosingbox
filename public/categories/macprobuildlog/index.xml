@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>the closing box</title>
-    <link>https://theclosingbox.com/</link>
-    <description>Recent content on the closing box</description>
+    <title>macprobuildlog on the closing box</title>
+    <link>https://theclosingbox.com/categories/macprobuildlog/</link>
+    <description>Recent content in macprobuildlog on the closing box</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 May 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 13 May 2020 00:00:00 -0400</lastBuildDate>
     
-	<atom:link href="https://theclosingbox.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://theclosingbox.com/categories/macprobuildlog/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>about</title>
-      <link>https://theclosingbox.com/about/</link>
-      <pubDate>Mon, 11 May 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://theclosingbox.com/about/</guid>
-      <description>Boston based.
-&amp;ldquo;The correction of prose, because it has no fixed laws, is endless - a poem comes right with a click like a closing box&amp;rdquo;</description>
-    </item>
     
     <item>
       <title>macpro build - day 1</title>
