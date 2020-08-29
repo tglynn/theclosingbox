@@ -6,6 +6,7 @@ theme="hugo_theme_pickles"
 [params]
   paginate = 10
   twitter = "timjglynn"
+  favicon = "/images/favicon.ico"
 
 [[menu.main]]
     name = "home"

@@ -6,7 +6,7 @@
     <description>Recent content on the closing box</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 May 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 29 Aug 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://theclosingbox.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -19,6 +19,16 @@
       <guid>https://theclosingbox.com/about/</guid>
       <description>Boston based.
 &amp;ldquo;The correction of prose, because it has no fixed laws, is endless - a poem comes right with a click like a closing box&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>macpro build - day 2</title>
+      <link>https://theclosingbox.com/posts/mac-pro-buildlog-04/</link>
+      <pubDate>Sat, 29 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://theclosingbox.com/posts/mac-pro-buildlog-04/</guid>
+      <description>Day two is dedicated to some early annoyance fixes, and some temperature and performance measurements of the NVMe storage.
+a tiny fan With a little more burn in time in a quiet room, I noticed a change in the sound profile of the Mac Pro. The addition of the Syba I/O card had added in a high-pitched, whiny fan noise. This didn&amp;rsquo;t seem to ramp up and down with temperatures on the M.</description>
     </item>
     
     <item>
