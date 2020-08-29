@@ -24,7 +24,7 @@ comes right with a click like a closing box"
 :EXPORT_HUGO_SECTION: posts
 :END:
 
-**** macpro build - day 3
+**** TODO  macpro build - day 3
 :PROPERTIES:
 :EXPORT_FILE_NAME: mac-pro-buildlog-05
 :EXPORT_DATE: 2020-08-29
@@ -32,7 +32,7 @@ comes right with a click like a closing box"
 
 Day three, fittingly enough, is all about Thunderbolt 3.
 
-**** macpro build - day 2
+**** DONE  macpro build - day 2
 :PROPERTIES:
 :EXPORT_FILE_NAME: mac-pro-buildlog-04
 :EXPORT_DATE: 2020-08-29
@@ -195,7 +195,7 @@ With no temperature impact and a clear performance change, I decided to keep the
 Syba I/O card in slot 2, and run it with the built in fan unplugged.
 
 
-**** macpro build - day 1
+**** DONE macpro build - day 1
 :PROPERTIES:
 :EXPORT_FILE_NAME: mac-pro-buildlog-03
 :EXPORT_DATE: 2020-05-13
@@ -557,7 +557,7 @@ performance.
 
 Almost a 40x improvement; not too shabby at all.
 
-**** macpro build - day 0
+**** DONE macpro build - day 0
 :PROPERTIES:
 :EXPORT_FILE_NAME: mac-pro-buildlog-02
 :EXPORT_DATE: 2020-05-12
@@ -684,7 +684,7 @@ up):
   explanations.  Useful for trying to understand /why/ some steps are required.
 
 
-**** macpro build - what and why
+**** DONE macpro build - what and why
 :PROPERTIES:
 :EXPORT_FILE_NAME: mac-pro-buildlog-01
 :EXPORT_DATE: 2020-05-12
