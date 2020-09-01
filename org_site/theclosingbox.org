@@ -24,6 +24,21 @@ comes right with a click like a closing box"
 :EXPORT_HUGO_SECTION: posts
 :END:
 
+**** TODO macpro build - day 4
+:PROPERTIES:
+:EXPORT_FILE_NAME: mac-pro-buildlog-06
+:EXPORT_DATE: 2020-08-30
+:END:
+
+With the PCI slots sorted out, it's time to turn to the processor tray.  This
+was well trodden territory - upgrading the memory in the 5,1 Mac Pro was
+something almost everyone did (Apple's memory prices are...rough, to say the
+least), and I remember the CPU replacement process dimly from my days in the
+blue t-shirt (the ridiculously long hex driver has a special place in my
+heart).
+
+As mentioned in the
+
 **** DONE  macpro build - day 3
 :PROPERTIES:
 :EXPORT_FILE_NAME: mac-pro-buildlog-05

@@ -22,6 +22,15 @@
     </item>
     
     <item>
+      <title>macpro build - day 3</title>
+      <link>https://theclosingbox.com/posts/mac-pro-buildlog-05/</link>
+      <pubDate>Sat, 29 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://theclosingbox.com/posts/mac-pro-buildlog-05/</guid>
+      <description>Day three, fittingly enough, is all about Thunderbolt 3. This was really the key to the whole project; getting Thunderbolt 3 working meant I could easily swap between my work computer and my personal computer. I could use the same peripherals and configuration (no moving monitors around or swapping input devices - just one thunderbolt cable). Ultimately, I was able to get everything sorted such that my Caldigit TS3 Plus and LG 5k Ultrafine work perfectly on warm boot (ie - they are not recognized as thunderbolt devices when the Mac Pro first powers on from a shutdown state, but after being logged in to a user and rebooted, they work just fine).</description>
+    </item>
+    
+    <item>
       <title>macpro build - day 2</title>
       <link>https://theclosingbox.com/posts/mac-pro-buildlog-04/</link>
       <pubDate>Sat, 29 Aug 2020 00:00:00 -0400</pubDate>
