@@ -2,8 +2,8 @@
 title = "macpro build - day 3"
 date = 2020-08-29
 categories = ["macprobuildlog"]
-weight = 4001
 draft = false
+weight = 4003
 toc = false
 +++
 
@@ -45,7 +45,7 @@ the included `THB_C` Header Cable would connect to the matching headers on a
 Gigabyte Thunderbolt motherboard.  Clearly, we don't have those on the 5,1.
 Instead, I jumped the third and fifth pins with a small piece of wire.
 
-{{<figure src="/images/mp_13.svg" caption="The small grey wire on the right jumps the third and fifth pin">}}
+{{< figure src="/images/mp_13.jpg" caption="Figure 1: The small grey wire on the right jumps the third and fifth pin" >}}
 
 
 ## firmware {#firmware}
@@ -56,7 +56,7 @@ the manual for your particular USB Programmer is important - the one that I
 purchased has a single identifying lead (one red wire) letting you know which is
 the first pin of the chip.
 
-{{<figure src="/images/mp_14.svg" caption="Note the red wire matching up with the `1` lead">}}
+{{< figure src="/images/mp_14.jpg" caption="Figure 2: Note the red wire matching up with the `1` lead" >}}
 
 I took the housing off of the Titan Ridge card, and clipped the programmer into
 position.
@@ -66,7 +66,7 @@ to you as possible, with the PCIe male interface on your right. The matching
 first PIN on the chip is the bottom right on both the Blue and Green chips in
 this orientation.
 
-{{<figure src="/images/mp_15.svg" caption="All wired up">}}
+{{< figure src="/images/mp_15.jpg" caption="Figure 3: All wired up" >}}
 
 With the programmer all plugged in, I pulled down the `flashrom` tool (`brew
 install flashrom`), and downloaded the DM2 firmware (available from the
@@ -134,7 +134,7 @@ OriginalFirmware-GreenChip.bin: data
 With both safely backed up, it was time to flash the custom ROM.  I switched
 back to the blue chip yet again.
 
-{{<figure src="/images/mp_16.svg" caption="In the orientation described above, the blue chip is on the left">}}
+{{< figure src="/images/mp_16.jpg" caption="Figure 4: In the orientation described above, the blue chip is on the left" >}}
 
 Then I wrote the updated firmware.
 
@@ -231,19 +231,19 @@ fairly simple configuration.  A single SSDT, added to the ACPI in Open Core.
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>ACPI</key>
-	<dict>
-		<key>Add</key>
-		<array>
-			<dict>
-				<key>Comment</key>
-				<string>GC Titan Ridge HotPlug SSDT</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-TBOLT3.aml</string>
-			</dict>
-		</array>
+    <key>ACPI</key>
+    <dict>
+        <key>Add</key>
+        <array>
+            <dict>
+                <key>Comment</key>
+                <string>GC Titan Ridge HotPlug SSDT</string>
+                <key>Enabled</key>
+                <true/>
+                <key>Path</key>
+                <string>SSDT-TBOLT3.aml</string>
+            </dict>
+        </array>
 ```
 
 ```text

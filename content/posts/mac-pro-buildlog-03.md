@@ -2,8 +2,8 @@
 title = "macpro build - day 1"
 date = 2020-05-13
 categories = ["macprobuildlog"]
-weight = 4003
 draft = false
+weight = 4005
 toc = false
 +++
 
@@ -12,7 +12,7 @@ toc = false
 It begins!  First, we'll verify our day 0 assumptions, and examine the machine
 itself.
 
-{{<figure src="/images/mp_02.svg" caption="A first peek inside">}}
+{{< figure src="/images/mp_02.jpg" caption="Figure 1: A first peek inside" >}}
 
 All told, it's cosmetically _fine_.  I'd love a more pristine chassis (this guy
 has definitely been bounced off some rough corners), but it was
@@ -266,22 +266,22 @@ and ergonomics have been improving in general in the PC industry, but many of
 the machines that I've worked on before had terribly fussy screws holding the
 PCI slot covers in place.  This simple place is such a nice touch.
 
-{{<figure src="/images/mp_03.svg" caption="Easy to turn by hand, with Phillips slots for undoing overzealous tightening">}}
+{{< figure src="/images/mp_03.jpg" caption="Figure 2: Easy to turn by hand, with Phillips slots for undoing overzealous tightening" >}}
 
 Power for the RX 580 is an easy story.  Just replace the 5770's mini six pin to
 six pin with a two mini six pin to eight pin cable.
 
-{{<figure src="/images/mp_04.svg" caption="Two mini six pin to eight pin cable">}}
+{{< figure src="/images/mp_04.jpg" caption="Figure 3: Two mini six pin to eight pin cable" >}}
 
 Out comes the 5770
 
-{{<figure src="/images/mp_05.svg" caption="ATI Radeon HD 5770">}}
+{{< figure src="/images/mp_05.jpg" caption="Figure 4: ATI Radeon HD 5770" >}}
 
 And in goes the RX 580
 
-{{<figure src="/images/mp_06.svg" caption="RX 580">}}
+{{< figure src="/images/mp_06.jpg" caption="Figure 5: RX 580" >}}
 
-{{<figure src="/images/mp_07.svg" caption="The installed 580">}}
+{{< figure src="/images/mp_07.jpg" caption="Figure 6: The installed 580" >}}
 
 I'll confess, I'm a little concerned at this point about airflow.  Looking at
 the NVMe card, it's going to be flush right up against the RX 580.  Heat might
@@ -306,21 +306,21 @@ indicators to the process.
 Coming back into the operating system, we've got the right firmware now to boot
 from an NVMe drive.
 
-{{<figure src="/images/mp_08.svg" caption="The sharp eyed reader will see upgraded CPUs and memory here; I had to take this screenshot after the fact">}}
+{{< figure src="/images/mp_08.jpg" caption="Figure 7: The sharp eyed reader will see upgraded CPUs and memory here; I had to take this screenshot after the fact" >}}
 
 Now it's time for the NVMe cards and the real Mojave installation.
 
 
 ## nvme card {#nvme-card}
 
-{{<figure src="/images/mp_09.svg" caption="Syba I/O Crest">}}
+{{< figure src="/images/mp_09.jpg" caption="Figure 8: Syba I/O Crest" >}}
 
 These are some positively _tiny_ standoffs.  Screwing them in from the bottom is
 fussy work.  There may or may not have been a few frantic minutes waving a
 flashlight across my floor to find the telltale flicker of a dropped standoff
 screw.
 
-{{<figure src="/images/mp_10.svg" caption="Look at how tiny they are!">}}
+{{< figure src="/images/mp_10.jpg" caption="Figure 9: Look at how tiny they are!" >}}
 
 I foolishly thought that using the provided screw driver was a good idea.
 Definitely not.  Switching to a real magnetized jeweler's set made getting the
@@ -329,7 +329,7 @@ m.2 drives installed much easier.
 It's a tight fit against the RX 580.  They are cheek to jowl in there, and I'll
 need to keep an eye on temperatures.
 
-{{<figure src="/images/mp_11.svg" caption="The Syba installed">}}
+{{< figure src="/images/mp_11.jpg" caption="Figure 10: The Syba installed" >}}
 
 Both drives are recognized immediately.  A quick trip to disk utility leaves us
 with a GUID partition scheme for an APFS volume that will serve as the target of

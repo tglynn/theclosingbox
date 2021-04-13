@@ -24,6 +24,13 @@ comes right with a click like a closing box"
 :EXPORT_HUGO_SECTION: posts
 :END:
 
+**** TODO macpro build - day 5
+:PROPERTIES:
+:EXPORT_FILE_NAME: mac-pro-buildlog-07
+:EXPORT_DATE: 2020-09-15
+:END:
+
+
 **** DONE macpro build - day 4
 :PROPERTIES:
 :EXPORT_FILE_NAME: mac-pro-buildlog-06
@@ -44,37 +51,37 @@ We've got two things on the docket for us to work on.  First, I'm going to remov
 First things first - let's look at our new processors
 
 #+CAPTION: A Pair of Xeon 5690 (32 nm 6 core, 12 thread 3.46 GHz)
-file:/images/mp_17.svg
+file:/images/mp_17.jpg
 
 Removing the tray is simple enough.  The edges are sharp, so I recommend being careful here. Keep the tray level, and be ready for it to be a bit heavier than you might expect.
 
 #+CAPTION: The dual processor tray sliding out
-file:/images/mp_18.svg
+file:/images/mp_18.jpg
 
 Threading the long shanked torx driver through the heatsink can be tough.  I find it useful to take a look from the side to get a clearer sense of how the shank gaps all stack on top of each other.  Loosen the retaining screws in a cross pattern, a bit at a time to try to keep the heatsink level.
 
 #+CAPTION: You can just see how the long torx driver reaches through the heatsink
-file:/images/mp_19.svg
+file:/images/mp_19.jpg
 
 The thermal paste is likely a full decade old at this point.  What is that, a 4th grader?  Something like that?  It cleans up easily with some isopropyl alcohol and a few Q-tips.
 
 #+CAPTION: Ten year old thermal paste
-file:/images/mp_20.svg
+file:/images/mp_20.jpg
 
 #+CAPTION: Cleans right off
-file:/images/mp_21.svg
+file:/images/mp_21.jpg
 
 The retaining clips are nice and easy, and dropping the new processors into place is a straightforward affair as well.  Apply some new thermal paste, pop the heatsinks back on, and we're ready to move on to memory.
 
 #+CAPTION: New processors, ready to roll
-file:/images/mp_22.svg
+file:/images/mp_22.jpg
 
 As I said before, almost every owner of a Mac with user serviceable RAM ended up tossing in a third-party stick or two.  The only trick here is that we need to make sure that we're running in triple channel memory mode, so I'll deliberately leave one slot empty (slots 4 and 8, to be specific).  One 16 gig DIMM in slots 1-3 and 5-7 will leave us with 96 GB of memory to play with.
 
 And the blue is a great color.
 
 #+CAPTION: Blue definitely means it runs cooler.
-file:/images/mp_23.svg
+file:/images/mp_23.jpg
 
 ***** performance
 
@@ -159,7 +166,7 @@ Gigabyte Thunderbolt motherboard.  Clearly, we don't have those on the 5,1.
 Instead, I jumped the third and fifth pins with a small piece of wire.
 
 #+CAPTION: The small grey wire on the right jumps the third and fifth pin
-file:/images/mp_13.svg
+file:/images/mp_13.jpg
 
 ***** firmware
 
@@ -170,7 +177,7 @@ purchased has a single identifying lead (one red wire) letting you know which is
 the first pin of the chip.
 
 #+CAPTION: Note the red wire matching up with the =1= lead
-file:/images/mp_14.svg
+file:/images/mp_14.jpg
 
 I took the housing off of the Titan Ridge card, and clipped the programmer into
 position.
@@ -181,7 +188,7 @@ first PIN on the chip is the bottom right on both the Blue and Green chips in
 this orientation.
 
 #+CAPTION: All wired up
-file:/images/mp_15.svg
+file:/images/mp_15.jpg
 
 With the programmer all plugged in, I pulled down the =flashrom= tool (=brew
 install flashrom=), and downloaded the DM2 firmware (available from the
@@ -251,7 +258,7 @@ With both safely backed up, it was time to flash the custom ROM.  I switched
 back to the blue chip yet again.
 
 #+CAPTION: In the orientation described above, the blue chip is on the left
-file:/images/mp_16.svg
+file:/images/mp_16.jpg
 
 
 Then I wrote the updated firmware.
@@ -410,7 +417,7 @@ high-pitched, whiny fan noise.  This didn't seem to ramp up and down with
 temperatures on the M.2 cards; it was a constant, awful whir.
 
 #+CAPTION: The fan in question
-file:/images/mp_12.svg
+file:/images/mp_12.jpg
 
 I know that NVMe thermal management is a significant problem, but my ambient and
 component temperatures within the machine were pretty good (and I /really/ didn't
@@ -567,7 +574,7 @@ It begins!  First, we'll verify our day 0 assumptions, and examine the machine
 itself.
 
 #+CAPTION: A first peek inside
-[[file:/images/mp_02.svg]]
+[[file:/images/mp_02.jpg]]
 
 All told, it's cosmetically /fine/.  I'd love a more pristine chassis (this guy
 has definitely been bounced off some rough corners), but it was
@@ -818,28 +825,28 @@ the machines that I've worked on before had terribly fussy screws holding the
 PCI slot covers in place.  This simple place is such a nice touch.
 
 #+CAPTION: Easy to turn by hand, with Phillips slots for undoing overzealous tightening
-[[file:/images/mp_03.svg]]
+[[file:/images/mp_03.jpg]]
 
 Power for the RX 580 is an easy story.  Just replace the 5770's mini six pin to
 six pin with a two mini six pin to eight pin cable.
 
 #+CAPTION: Two mini six pin to eight pin cable
-[[file:/images/mp_04.svg]]
+[[file:/images/mp_04.jpg]]
 
 
 Out comes the 5770
 
 #+CAPTION: ATI Radeon HD 5770
-[[file:/images/mp_05.svg]]
+[[file:/images/mp_05.jpg]]
 
 
 And in goes the RX 580
 
 #+CAPTION: RX 580
-[[file:/images/mp_06.svg]]
+[[file:/images/mp_06.jpg]]
 
 #+CAPTION: The installed 580
-[[file:/images/mp_07.svg]]
+[[file:/images/mp_07.jpg]]
 
 I'll confess, I'm a little concerned at this point about airflow.  Looking at
 the NVMe card, it's going to be flush right up against the RX 580.  Heat might
@@ -864,14 +871,14 @@ Coming back into the operating system, we've got the right firmware now to boot
 from an NVMe drive.
 
 #+CAPTION: The sharp eyed reader will see upgraded CPUs and memory here; I had to take this screenshot after the fact
-[[file:/images/mp_08.svg]]
+[[file:/images/mp_08.jpg]]
 
 Now it's time for the NVMe cards and the real Mojave installation.
 
 ***** nvme card
 
 #+CAPTION: Syba I/O Crest
-[[file:/images/mp_09.svg]]
+[[file:/images/mp_09.jpg]]
 
 These are some positively /tiny/ standoffs.  Screwing them in from the bottom is
 fussy work.  There may or may not have been a few frantic minutes waving a
@@ -879,7 +886,7 @@ flashlight across my floor to find the telltale flicker of a dropped standoff
 screw.
 
 #+CAPTION: Look at how tiny they are!
-[[file:/images/mp_10.svg]]
+[[file:/images/mp_10.jpg]]
 
 I foolishly thought that using the provided screw driver was a good idea.
 Definitely not.  Switching to a real magnetized jeweler's set made getting the
@@ -889,7 +896,7 @@ It's a tight fit against the RX 580.  They are cheek to jowl in there, and I'll
 need to keep an eye on temperatures.
 
 #+CAPTION: The Syba installed
-[[file:/images/mp_11.svg]]
+[[file:/images/mp_11.jpg]]
 
 
 Both drives are recognized immediately.  A quick trip to disk utility leaves us
@@ -1082,7 +1089,7 @@ of the Mac Pro, which was always more costly than it had any right to be).
 Could it be my 2020 computer?
 
 #+CAPTION: cMP 5,1
-[[file:/images/mp_01.svg]]
+[[file:/images/mp_01.jpg]]
 
 ***** what's the goal?
 

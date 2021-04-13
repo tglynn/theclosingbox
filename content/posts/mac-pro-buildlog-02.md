@@ -2,8 +2,8 @@
 title = "macpro build - day 0"
 date = 2020-05-12
 categories = ["macprobuildlog"]
-weight = 4004
 draft = false
+weight = 4006
 toc = false
 +++
 
@@ -23,7 +23,7 @@ availability.  Ultimately, I landed on:
 
 (Note that the `8 Core` specification spells out two quad core CPUs)
 
-More details around that particular Mac available [here](https://everymac.com/systems/apple/mac_pro/specs/mac-pro-eight-core-2.4-mid-2010-westmere-specs.html).
+More details around that particular Mac available [here](https://everymac.com/systems/apple/mac%5Fpro/specs/mac-pro-eight-core-2.4-mid-2010-westmere-specs.html).
 
 Most of those specs are stock - that is the GPU that shipped with that machine in
 2010, which is important for getting the bootscreen and will be a useful thing to keep
@@ -67,10 +67,10 @@ look like:
 1.  Document and benchmark the initial system
 2.  Run High Sierra firmware updates, wipe 1 TB HDD and clean install High Sierra
 3.  Install Radeon RX 580.  Power the card with a dual mini 6 pin to single 8 pin
-	adapter.
+    adapter.
 4.  Run all firmware updates bundled in the Mojave installer. This will bring the
-	machine's firmware to `144.0.0.0.0`, and crucially adds the ability to boot
-	off of NVMe drives.
+    machine's firmware to `144.0.0.0.0`, and crucially adds the ability to boot
+    off of NVMe drives.
 5.  Install PCIe NVMe bifurcation Riser and boot NVMe drive in slot 2
 6.  Install Mojave to NVMe drive.  Remove 1 TB HDD, store in safe place.
 7.  Flash Titan Ridge thunderbolt 3 card
@@ -81,7 +81,7 @@ look like:
 12. Install Radeon VII
 13. Upgrade optical drive to Blu-ray drive
 14. Install Windows 10 (to either SATA SSD or, if I've installed OpenCore, to
-	the second NVMe drive)
+    the second NVMe drive)
 
 
 ## componentry {#componentry}
@@ -110,21 +110,21 @@ up):
 ## references {#references}
 
 -   [The Definitive Classic Mac Pro Upgrade Guide](http://blog.greggant.com/posts/2018/05/07/definitive-mac-pro-upgrade-guide.html) - just an outstanding
-	resource. Lots of information, lots of links.  This single post provides
-	almost all of required info for this project.
+    resource. Lots of information, lots of links.  This single post provides
+    almost all of required info for this project.
 
 -   [MacRumors thread, Thunderbolt 3](https://forums.macrumors.com/threads/testing-tb3-aic-with-mp-5-1.2143042/) - ever evolving, source of some great
-	information about flashing the Titan Ridge for use in the cMP 5,1
+    information about flashing the Titan Ridge for use in the cMP 5,1
 
--   [OpenCore on Legacy Apple Hardware](https://forums.macrumors.com/threads/opencore-on-the-mac-pro.2207814/?view=reaction_score) - another fantastically maintained wiki
-	post.  Improved by leaps and bounds even as I'm writing this up.
+-   [OpenCore on Legacy Apple Hardware](https://forums.macrumors.com/threads/opencore-on-the-mac-pro.2207814/?view=reaction%5Fscore) - another fantastically maintained wiki
+    post.  Improved by leaps and bounds even as I'm writing this up.
 
 -   [Thunderbolt Mac Pro Early 2009](https://github.com/ameyrupji/thunderbolt-macpro-5-1) - good summation of the flashing process, with
-	some very useful pictures and links
+    some very useful pictures and links
 
 -   [Flashing for 4k UHD](https://www.makemkv.com/forum/viewtopic.php?f=16&t=19928&sid=66451896270b9a530b25b882ed3aad55) - not cMP 5,1 specific, but great information on flashing
-	the Blu-ray drive for 4k UHD rips
+    the Blu-ray drive for 4k UHD rips
 
 -   [Gigabyte designare flashing](https://www.tonymacx86.com/threads/success-gigabyte-designare-z390-thunderbolt-3-i7-9700k-amd-rx-580.267551/) - the micro guides provide a ton of useful
-	background information, and tend to be a little more technical in their
-	explanations.  Useful for trying to understand _why_ some steps are required.
+    background information, and tend to be a little more technical in their
+    explanations.  Useful for trying to understand _why_ some steps are required.

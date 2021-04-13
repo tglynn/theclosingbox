@@ -2,8 +2,8 @@
 title = "macpro build - what and why"
 date = 2020-05-12
 categories = ["macprobuildlog"]
-weight = 4005
 draft = false
+weight = 4007
 toc = false
 +++
 
@@ -38,7 +38,7 @@ of the Mac Pro, which was always more costly than it had any right to be).
 
 Could it be my 2020 computer?
 
-{{<figure src="/images/mp_01.svg" caption="cMP 5,1">}}
+{{< figure src="/images/mp_01.jpg" caption="Figure 1: cMP 5,1" >}}
 
 
 ## what's the goal? {#what-s-the-goal}
