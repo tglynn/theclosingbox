@@ -31,7 +31,7 @@ comes right with a click like a closing box"
 
 ***** what's the problem?
 
-My virtualization lab, networking gear, NAS and AV backbone is an absolute mess.  The current 12u server rack is full, the 6u network rack has stuff sitting not just in it bu on top of it, and it's all a real mess down there.  Lots of wasted space, awkward network and power runs, and poor use of the large mesh storage shelves in that area.  I'd like to store other stuff in that space, and sitting the 6u rack unit on top of wire mesh shelves with printer/AV equipment underneath just doesn't work.
+My virtualization lab, networking gear, NAS and AV backbone is an absolute mess.  The current 12u server rack is full, the 6u network rack has stuff sitting not just in it but on top of it, and it's all a real mess down there.  Lots of wasted space, awkward network and power runs, and poor use of the large mesh storage shelves in that area.  I'd like to store other stuff in that space, and sitting the 6u rack unit on top of wire mesh shelves with printer/AV equipment underneath just doesn't work.
 
 The space is an unfinished portion of the basement that used to house our washer and dryer.  Since we moved them up into the second floor laundry closet earlier this year, I've got a bunch of extra floor space to properly rearrange the equipment.  That area is a great storage spot, with easy outdoor access, so maximizing shelf space is a priority.  Getting all equipment into a rack or onto a permanent shelf, and keeping the shelves as accessible as possible are my two guiding principles.
 
