@@ -8,13 +8,13 @@ toc = false
 
 ## what's the problem? {#what-s-the-problem}
 
-My virtualization lab, networking gear, NAS and AV backbone is an absolute mess.  The current 12u server rack is full, the 6u network rack has stuff sitting not just in it bu on top of it, and it's all a real mess down there.  Lots of wasted space, awkward network and power runs, and poor use of the large mesh storage shelves in that area.  I'd like to store other stuff in that space, and sitting the 6u rack unit on top of wire mesh shelves with printer/AV equipment underneath just doesn't work.
+My virtualization lab, networking gear, NAS and AV backbone is an absolute mess.  The current 12u server rack is full, the 6u network rack has stuff sitting not just in it but on top of it, and it's all a real mess down there.  Lots of wasted space, awkward network and power runs, and poor use of the large mesh storage shelves in that area.  I'd like to store other stuff in that space, and sitting the 6u rack unit on top of wire mesh shelves with printer/AV equipment underneath just doesn't work.
 
 The space is an unfinished portion of the basement that used to house our washer and dryer.  Since we moved them up into the second floor laundry closet earlier this year, I've got a bunch of extra floor space to properly rearrange the equipment.  That area is a great storage spot, with easy outdoor access, so maximizing shelf space is a priority.  Getting all equipment into a rack or onto a permanent shelf, and keeping the shelves as accessible as possible are my two guiding principles.
 
 You can see in the original floorplan drawing how awkward the layout is.
 
-{{< figure src="/images/floorplanbefore.jpg" caption="Figure 1: A rough outline of the original floorplan" >}}
+{{< figure src="/images/floorplanbefore.jpg" caption="<span class=\"figure-number\">Figure 1: </span>A rough outline of the original floorplan" >}}
 
 
 ## failed solutions {#failed-solutions}
@@ -43,7 +43,7 @@ Add a 25u rack, positioned immediately to the left when walking into the raised 
 
 So the new floor plan will be something like:
 
-{{< figure src="/images/floorplanafter.jpg" caption="Figure 2: So much room for activities!" >}}
+{{< figure src="/images/floorplanafter.jpg" caption="<span class=\"figure-number\">Figure 2: </span>So much room for activities!" >}}
 
 
 ## what's in the rack? {#what-s-in-the-rack}
@@ -55,67 +55,67 @@ They're both open topped, but once they're in place I'll likely cut down some pl
 
 ### r1 - 25u rack {#r1-25u-rack}
 
-r1 is a [StarTech 25U Open Frame Server Rack](https://www.amazon.com/gp/product/B00O6GNLQE/ref=ppx%5Fyo%5Fdt%5Fb%5Fasin%5Ftitle%5Fo01%5Fs01?ie=UTF8&psc=1)
+r1 is a [StarTech 25U Open Frame Server Rack](https://www.amazon.com/gp/product/B00O6GNLQE/ref=ppx_yo_dt_b_asin_title_o01_s01?ie=UTF8&psc=1)
 
 Drawn out, it should look like:
 
-{{< figure src="/images/r1.jpg" caption="Figure 3: 25u Rack, r1" >}}
+{{< figure src="/images/r1.jpg" caption="<span class=\"figure-number\">Figure 3: </span>25u Rack, r1" >}}
 
 And in table form with links:
 
-| Rack unit | Contents                                                                                                                                                                                                                                                                                                                  |
-|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 25        | E1,[ Startech 8 outlet 1u PDU](https://www.amazon.com/gp/product/B0035PS5AE/ref=ppx%5Fyo%5Fdt%5Fb%5Fasin%5Ftitle%5Fo01%5Fs00?ie=UTF8&psc=1)                                                                                                                                                                               |
-| 24        | hdmi.iot.,  [HDMI Matrix](https://www.amazon.com/gp/product/B01GKFQNG8/ref=ppx%5Fyo%5Fdt%5Fb%5Fsearch%5Fasin%5Ftitle?ie=UTF8&psc=1)                                                                                                                                                                                       |
-| 23        | Basement Rack 8 ([UB US-8-150w)](https://store.ui.com/collections/unifi-network-switching/products/unifi-switch-8-150w), vesta.internal. ([RPi 4](https://www.amazon.com/gp/product/B07V5JTMV9/ref=ppx%5Fyo%5Fdt%5Fb%5Fsearch%5Fasin%5Ftitle?ie=UTF8&psc=1), with [this case](https://www.thingiverse.com/thing:4746666)) |
-| 22        | P1, [Cable Matters 24 port keystone patch panel](https://www.amazon.com/gp/product/B0072JVT02/ref=ppx%5Fyo%5Fdt%5Fb%5Fasin%5Ftitle%5Fo01%5Fs03?ie=UTF8&psc=1)                                                                                                                                                             |
-| 21        | Basement Rack 24, [UB USW-Pro-24](https://store.ui.com/collections/unifi-network-switching/products/usw-pro-24)                                                                                                                                                                                                           |
-| 20        | P2, [Cable Matters 24 port keystone patch panel](https://www.amazon.com/gp/product/B0072JVT02/ref=ppx%5Fyo%5Fdt%5Fb%5Fasin%5Ftitle%5Fo01%5Fs03?ie=UTF8&psc=1)                                                                                                                                                             |
-| 19        | Core,  [UB US-16-XG](https://store.ui.com/collections/unifi-network-switching/products/unifi-switch-16-xg)                                                                                                                                                                                                                |
-| 18        | UDM,  [UDM Pro](https://store.ui.com/collections/unifi-network-unifi-os-consoles/products/udm-pro)                                                                                                                                                                                                                        |
-| 17        | cerberus.internal., [Mac Mini, 2011](https://support.apple.com/kb/sp632?locale=en%5FUS),                                                                                                                                                                                                                                  |
-| 16        |                                                                                                                                                                                                                                                                                                                           |
-| 15        | [Intel NUC (Proxmox02)](https://www.amazon.com/gp/product/B07GX59NY8/ref=ppx%5Fyo%5Fdt%5Fb%5Fsearch%5Fasin%5Ftitle?ie=UTF8&psc=1), [Apple TV HD](https://www.apple.com/apple-tv-hd/specs/), [Hue Bridge](https://www.philips-hue.com/en-us/p/hue-bridge/046677458478)                                                     |
-| 14        | E2, [CyberPower 12 Outlet Surge Protector](https://www.amazon.com/gp/product/B00077INZU/ref=ppx%5Fyo%5Fdt%5Fb%5Fsearch%5Fasin%5Ftitle?ie=UTF8&psc=1)                                                                                                                                                                      |
-| 13        |                                                                                                                                                                                                                                                                                                                           |
-| 12        | [2U Rack Drawer](https://www.amazon.com/gp/product/B009WS7TSW/ref=ppx%5Fyo%5Fdt%5Fb%5Fsearch%5Fasin%5Ftitle?ie=UTF8&psc=1)                                                                                                                                                                                                |
-| 11        |                                                                                                                                                                                                                                                                                                                           |
-| 10        |                                                                                                                                                                                                                                                                                                                           |
-| 9         | [X32 Rack](https://www.behringer.com/product.html?modelCode=P0AWN)                                                                                                                                                                                                                                                        |
-| 8         |                                                                                                                                                                                                                                                                                                                           |
-| 7         |                                                                                                                                                                                                                                                                                                                           |
-| 6         |                                                                                                                                                                                                                                                                                                                           |
-| 5         | [4U Rack Drawer](https://www.amazon.com/gp/product/B009WS7S1A/ref=ppx%5Fyo%5Fdt%5Fb%5Fsearch%5Fasin%5Ftitle?ie=UTF8&psc=1)                                                                                                                                                                                                |
-| 4         |                                                                                                                                                                                                                                                                                                                           |
-| 3         |                                                                                                                                                                                                                                                                                                                           |
-| 2         |                                                                                                                                                                                                                                                                                                                           |
-| 1         | [Proxmox03](https://www.amazon.com/gp/product/B00Q2Z11QE/ref=ppx%5Fyo%5Fdt%5Fb%5Fsearch%5Fasin%5Ftitle?ie=UTF8&psc=1)                                                                                                                                                                                                     |
+| Rack unit | Contents                                                                                                                                                                                                                                                                                                      |
+|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 25        | E1,[ Startech 8 outlet 1u PDU](https://www.amazon.com/gp/product/B0035PS5AE/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1)                                                                                                                                                                                 |
+| 24        | hdmi.iot.,  [HDMI Matrix](https://www.amazon.com/gp/product/B01GKFQNG8/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)                                                                                                                                                                                       |
+| 23        | Basement Rack 8 ([UB US-8-150w)](https://store.ui.com/collections/unifi-network-switching/products/unifi-switch-8-150w), vesta.internal. ([RPi 4](https://www.amazon.com/gp/product/B07V5JTMV9/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1), with [this case](https://www.thingiverse.com/thing:4746666)) |
+| 22        | P1, [Cable Matters 24 port keystone patch panel](https://www.amazon.com/gp/product/B0072JVT02/ref=ppx_yo_dt_b_asin_title_o01_s03?ie=UTF8&psc=1)                                                                                                                                                               |
+| 21        | Basement Rack 24, [UB USW-Pro-24](https://store.ui.com/collections/unifi-network-switching/products/usw-pro-24)                                                                                                                                                                                               |
+| 20        | P2, [Cable Matters 24 port keystone patch panel](https://www.amazon.com/gp/product/B0072JVT02/ref=ppx_yo_dt_b_asin_title_o01_s03?ie=UTF8&psc=1)                                                                                                                                                               |
+| 19        | Core,  [UB US-16-XG](https://store.ui.com/collections/unifi-network-switching/products/unifi-switch-16-xg)                                                                                                                                                                                                    |
+| 18        | UDM,  [UDM Pro](https://store.ui.com/collections/unifi-network-unifi-os-consoles/products/udm-pro)                                                                                                                                                                                                            |
+| 17        | cerberus.internal., [Mac Mini, 2011](https://support.apple.com/kb/sp632?locale=en_US),                                                                                                                                                                                                                        |
+| 16        |                                                                                                                                                                                                                                                                                                               |
+| 15        | [Intel NUC (Proxmox02)](https://www.amazon.com/gp/product/B07GX59NY8/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1), [Apple TV HD](https://www.apple.com/apple-tv-hd/specs/), [Hue Bridge](https://www.philips-hue.com/en-us/p/hue-bridge/046677458478)                                                     |
+| 14        | E2, [CyberPower 12 Outlet Surge Protector](https://www.amazon.com/gp/product/B00077INZU/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)                                                                                                                                                                      |
+| 13        |                                                                                                                                                                                                                                                                                                               |
+| 12        | [2U Rack Drawer](https://www.amazon.com/gp/product/B009WS7TSW/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)                                                                                                                                                                                                |
+| 11        |                                                                                                                                                                                                                                                                                                               |
+| 10        |                                                                                                                                                                                                                                                                                                               |
+| 9         | [X32 Rack](https://www.behringer.com/product.html?modelCode=P0AWN)                                                                                                                                                                                                                                            |
+| 8         |                                                                                                                                                                                                                                                                                                               |
+| 7         |                                                                                                                                                                                                                                                                                                               |
+| 6         |                                                                                                                                                                                                                                                                                                               |
+| 5         | [4U Rack Drawer](https://www.amazon.com/gp/product/B009WS7S1A/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)                                                                                                                                                                                                |
+| 4         |                                                                                                                                                                                                                                                                                                               |
+| 3         |                                                                                                                                                                                                                                                                                                               |
+| 2         |                                                                                                                                                                                                                                                                                                               |
+| 1         | [Proxmox03](https://www.amazon.com/gp/product/B00Q2Z11QE/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)                                                                                                                                                                                                     |
 
 
 ### r2 - 12u rack {#r2-12u-rack}
 
-r2 is a [StarTech 12U Open Frame Server Rack](https://www.amazon.com/gp/product/B00P1RJ9LS/ref=ppx%5Fyo%5Fdt%5Fb%5Fasin%5Ftitle%5Fo01%5Fs01?ie=UTF8&th=1).
+r2 is a [StarTech 12U Open Frame Server Rack](https://www.amazon.com/gp/product/B00P1RJ9LS/ref=ppx_yo_dt_b_asin_title_o01_s01?ie=UTF8&th=1).
 
 A quick sketch of the unit once filled:
 
-{{< figure src="/images/r2.jpg" caption="Figure 4: 12u Rack, r2" >}}
+{{< figure src="/images/r2.jpg" caption="<span class=\"figure-number\">Figure 4: </span>12u Rack, r2" >}}
 
 And in table form with links:
 
-| Rack unit | Contents                                                                                                                                                      |
-|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 12        | E3, [CyberPower 12 Outlet Surge Protector](https://www.amazon.com/gp/product/B00077INZU/ref=ppx%5Fyo%5Fdt%5Fb%5Fsearch%5Fasin%5Ftitle?ie=UTF8&psc=1)          |
-| 11        | P3, [Cable Matters 24 port keystone patch panel](https://www.amazon.com/gp/product/B0072JVT02/ref=ppx%5Fyo%5Fdt%5Fb%5Fasin%5Ftitle%5Fo01%5Fs03?ie=UTF8&psc=1) |
-| 10        |                                                                                                                                                               |
-| 9         | [2U Rack Drawer](https://www.amazon.com/gp/product/B009WS7TSW/ref=ppx%5Fyo%5Fdt%5Fb%5Fsearch%5Fasin%5Ftitle?ie=UTF8&psc=1)                                    |
-| 8         |                                                                                                                                                               |
-| 7         |                                                                                                                                                               |
-| 6         |                                                                                                                                                               |
-| 5         | [Proxmox01](https://www.silverstonetek.com/product.php?pid=488)                                                                                               |
-| 4         |                                                                                                                                                               |
-| 3         |                                                                                                                                                               |
-| 2         |                                                                                                                                                               |
-| 1         | [janus.internal.](https://www.amazon.com/gp/product/B0055EV30W/ref=ppx%5Fyo%5Fdt%5Fb%5Fsearch%5Fasin%5Ftitle?ie=UTF8&psc=1)                                   |
+| Rack unit | Contents                                                                                                                                        |
+|-----------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| 12        | E3, [CyberPower 12 Outlet Surge Protector](https://www.amazon.com/gp/product/B00077INZU/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)        |
+| 11        | P3, [Cable Matters 24 port keystone patch panel](https://www.amazon.com/gp/product/B0072JVT02/ref=ppx_yo_dt_b_asin_title_o01_s03?ie=UTF8&psc=1) |
+| 10        |                                                                                                                                                 |
+| 9         | [2U Rack Drawer](https://www.amazon.com/gp/product/B009WS7TSW/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)                                  |
+| 8         |                                                                                                                                                 |
+| 7         |                                                                                                                                                 |
+| 6         |                                                                                                                                                 |
+| 5         | [Proxmox01](https://www.silverstonetek.com/product.php?pid=488)                                                                                 |
+| 4         |                                                                                                                                                 |
+| 3         |                                                                                                                                                 |
+| 2         |                                                                                                                                                 |
+| 1         | [janus.internal.](https://www.amazon.com/gp/product/B0055EV30W/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)                                 |
 
 
 ### pdu mapping {#pdu-mapping}
@@ -329,16 +329,16 @@ I love this lunatic device.  Being able to reprogram display flows is so much fu
 Input mapping is mostly reliant on out of rack cables.  The Apple TV and Proxmox01 (windows 10 gaming VM with passthrough GPU) inputs are both in rack, and the consoles will both need slightly longer cables
 since the matrix is moving off of the shelf that they currently live in.  The rest is in my big desk HDMI bundle, coming in through the ceiling.
 
-| port   | connection                          | edid                           |
-|--------|-------------------------------------|--------------------------------|
-| HDMI 1 | Desktop, nvidia 1070 HDMI out       | 1080p HD Audio 7.1             |
-| HDMI 2 | m1 MacMini HDMI out                 | 1080p HD Audio 7.1             |
-| HDMI 3 | Desk HDMI cable                     | 1080p HD Audio 7.1             |
-| HDMI 4 | Proxmox01 RX580 hdmi out (win01 vm) | 1080p HD Audio 7.1             |
-| HDMI 5 | PS5                                 | COPY\_FROM\_OUT\_1 (4k60,444)  |
-| HDMI 6 | XboxOneX                            | COPY\_FROM\_OUT\_1 (4k60, 444) |
-| HDMI 7 | Apple TV                            | 1080p HD Audio 7.1             |
-| HDMI 8 | Atem Mini Extreme Output 1          | 1080p HD Audio 7.1             |
+| port   | connection                          | edid                        |
+|--------|-------------------------------------|-----------------------------|
+| HDMI 1 | Desktop, nvidia 1070 HDMI out       | 1080p HD Audio 7.1          |
+| HDMI 2 | m1 MacMini HDMI out                 | 1080p HD Audio 7.1          |
+| HDMI 3 | Desk HDMI cable                     | 1080p HD Audio 7.1          |
+| HDMI 4 | Proxmox01 RX580 hdmi out (win01 vm) | 1080p HD Audio 7.1          |
+| HDMI 5 | PS5                                 | COPY_FROM_OUT_1 (4k60,444)  |
+| HDMI 6 | XboxOneX                            | COPY_FROM_OUT_1 (4k60, 444) |
+| HDMI 7 | Apple TV                            | 1080p HD Audio 7.1          |
+| HDMI 8 | Atem Mini Extreme Output 1          | 1080p HD Audio 7.1          |
 
 Output mapping is entirely out of rack at the moment.  I'll move my HDMI bundle over pretty much unchanged.
 
