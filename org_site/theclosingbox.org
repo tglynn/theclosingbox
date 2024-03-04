@@ -18,6 +18,63 @@ Boston based.
 
 "The correction of prose, because it has no fixed laws, is endless - a poem
 comes right with a click like a closing box"
+*** Experimenting with Gain Forward
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: posts
+:END:
+**** TODO experimenting with gainforward part one
+:PROPERTIES:
+:EXPORT_FILE_NAME: experimenting-with-gainforward-part-one
+:EXPORT_DATE: 2023-09-08
+:END:
+
+This thought experiment nerd-sniped me, so I thought I would see if I could turn it into a real experiment.  Some caveats first, then a TLDR, then the details for reproducability.
+
+Caveats:
+I don't have a particularly fancy or accurate way to measure SPL.  SPL readings came from the NIOSH SLM app on my iPhone and should be taken with grain of salt.
+I used a pretty crummy studio monitor (Yamaha HS5) for my source; the frequency fresponse for that monitor is definitely not flat, and it's a little guy, so low frequency reproduction is questionable.
+I don't have the quietest room in the world; my floor is somewhere around 29 or 30 db(A) according to the NIOSH SLM app.
+
+TLDR:
+For a DPA 4060 in a room with an ambient SPL of ~30 db(A) and a target signal in the neighborhood of 60 db(A), adding up to 51 db of digital gain from GainForward on a Sound Devices 888 doesn't appear to increase the noise floor any differently than applying that gain to a regular old preamp.
+
+The test:
+
+I took two DPA 4060s and attached them in front of a speaker.  My test audio track was a tone (for alignment), 30 seconds of silence, 60 seconds of pink noise, 30 seconds of silence, and final tone for alignment.
+
+I started with a control - both lavs hooked up with the DPA XLR adapter to inputs 1 and 2 on my 888.  I set levels based on the pink noise, so that I was peaking around -18.  That happened to be 50 db, based on the loudness of my speakers and exact position of the mics.  Putting my phone between the two mics, I measured the pink noise at around 60 db(A) (plus or minus whatever, since this isn't a super accurate way to measure sound pressure).  I did two takes with MicA in input 1 and MicB in input 2, then I swapped them and did two more.  These control samples gave me my margin of error - I measured the peaks and RMS for the clips as a whole, the silence sections and the pink noise sections.
+
+
+Then I swapped in an A20 Mini, switching the microdot on one of the 4060's to the lemo connector.  I didn't change the levels, since when I swapped from the XLR connection to the A20 mini, I noticed that it was peaking in the right place to match the mic coming in VIA XLR.  It seems like 36.5 db of digital gain (which was the same position on the trim kno b) gave me the same level.  I ran through two takes, then again swapped Mic A and Mic B (so Mic A went from the transmitter to the 888 XLR input, and vice versa) and ran it twice more.
+
+Then, just to see what happened, I turned the gain up as high as I could on both until I was just shy of clipping (the final clips peaked at -0.5 db when I got them into my DAW).  That was preamp gain of 65 db for the XLR input and 51.5 db of digital gain for the A20 mini.  I ran through two takes as well.
+
+Pulling all the takes in and matching their peaks, running through an A20 mini and adding digital gain does not appear to add any to the noise floor.  Again, see all the caveats above - this was not a perfect test, I don't have great SPL measuring equipment, or even a particularly quiet room, but I thought it was interesting enough to share.
+
+
+*** State of the Homelab
+
+
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: posts
+:END:
+**** TODO state of the homelab 2023
+:PROPERTIES:
+:EXPORT_FILE_NAME: state-of-the-homelab-2023
+:EXPORT_DATE: 2023-06-06
+:END:
+
+***** summer 2023
+
+I want to capture current state of my homelab - mostly to act as a reference for future me (hello, future me!), helping to remember what I'm doing and why.  I've been running machines to lab things out for many years now, so there's a certain amount of organic growth and cruft that has accumulated over time.
+
+***** physical stuff
+**** TODO homelab update 2024
+:PROPERTIES:
+:EXPORT_FILE_NAME: homelab-update-2024
+:EXPORT_DATE: 2024-03-4
+:END:
+
 *** Blog Migration
 :PROPERTIES:
 :EXPORT_HUGO_SECTION: posts
