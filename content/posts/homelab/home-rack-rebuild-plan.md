@@ -2,7 +2,6 @@
 title = "home rack rebuild plan"
 date = 2021-05-30
 draft = false
-weight = 4001
 toc = false
 +++
 

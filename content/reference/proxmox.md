@@ -32,3 +32,23 @@ pvesm add nfs plex-media --server nas01.internal.glynn.xyz --path /mnt/shared/pl
 ```
 
 {{< /expand >}}
+
+
+## create vm from template 
+
+```bash
+qm clone $TEMPLATEID $NEWVMID --name $NAMEOFNEWVM
+```
+
+
+{{< expand "Example"  >}}
+```bash
+qm clone 903 300 --name pgsql01 --full
+```
+
+Also, you'll likely want to resize the root volume:
+
+```bash
+qm resize 300 scsi0 +98G
+```
+{{< /expand >}}

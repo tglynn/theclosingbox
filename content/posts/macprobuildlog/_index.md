@@ -1,6 +1,6 @@
 ---
 title: "macpro build log"
-date: 2024-05-15T21:23:47-04:00
+date: 2020-05-12T21:23:47-04:00
 # bookComments: false
 # bookSearchExclude: false
 bookCollapseSection: true
