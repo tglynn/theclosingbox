@@ -1,7 +1,6 @@
 +++
 title = "macpro build - day 0"
 date = 2020-05-12
-categories = ["macprobuildlog"]
 draft = false
 weight = 4006
 toc = false

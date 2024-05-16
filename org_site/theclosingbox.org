@@ -50,8 +50,15 @@ Then I swapped in an A20 Mini, switching the microdot on one of the 4060's to th
 Then, just to see what happened, I turned the gain up as high as I could on both until I was just shy of clipping (the final clips peaked at -0.5 db when I got them into my DAW).  That was preamp gain of 65 db for the XLR input and 51.5 db of digital gain for the A20 mini.  I ran through two takes as well.
 
 Pulling all the takes in and matching their peaks, running through an A20 mini and adding digital gain does not appear to add any to the noise floor.  Again, see all the caveats above - this was not a perfect test, I don't have great SPL measuring equipment, or even a particularly quiet room, but I thought it was interesting enough to share.
-
-
+*** How To
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: posts
+:END:
+**** TODO how to re ip a proxmox 8 cluster
+:PROPERTIES:
+:EXPORT_FILE_NAME: how-to-re-ip-proxmox-8
+:EXPORT_DATE: 2024-03-7
+:END:
 *** State of the Homelab
 
 
@@ -75,6 +82,9 @@ I want to capture current state of my homelab - mostly to act as a reference for
 :EXPORT_DATE: 2024-03-4
 :END:
 
+***** what's the story?
+
+I've been running something like a homelab for over a decade now.  It's changed shape and complexity over that time, but it's fun to revisit and refine, especially
 *** Blog Migration
 :PROPERTIES:
 :EXPORT_HUGO_SECTION: posts

@@ -1,19 +1,24 @@
 baseURL = "https://theclosingbox.com/"
-languageCode = "en-us"
 title = "the closing box"
-theme="hugo_theme_pickles"
+theme="hugo-book"
 
 [params]
-  paginate = 10
-  twitter = "timjglynn"
-  favicon = "/images/favicon.ico"
+  BookTheme = 'light'
+  BookToC = true
+  BookFavicon = 'images/favicon.ico'
+  BookSection = '*'
+  # BookDateFormat = 'January 2, 2006'
+  BookSearch = true
+  BookComments = false
 
-[[menu.main]]
-    name = "home"
-    url = "/"
-    weight = 1
 
-[[menu.main]]
-    name = "about"
-    url = "/about"
-    weight = 2
+
+# [[menu.after]]
+#     name = "home"
+#     url = "/"
+#     weight = 1
+
+# [[menu.after]]
+#     name = "about"
+#     url = "/about"
+#     weight = 2

@@ -2,3 +2,6 @@
 	path = themes/hugo_theme_pickles
 	url = https://github.com/tglynn/hugo_theme_pickles
 	branch = develop
+[submodule "themes/hugo-book"]
+	path = themes/hugo-book
+	url = https://github.com/alex-shpak/hugo-book
