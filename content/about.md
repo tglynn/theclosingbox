@@ -6,7 +6,7 @@ draft = false
 toc = false
 +++
 
-Boston based.
+Boston based.  tim AT theclosingbox.com.
 
 *"The correction of prose, because it has no fixed laws, is endless - a poem
 comes right with a click like a closing box"*
